@@ -1,5 +1,5 @@
 # Encoding: UTF-8
-$:.push File.expand_path('../lib/', __FILE__)
+$:.push File.expand_path('../lib', __FILE__)
 require 'refinery/version'
 
 version = Refinery::Version.to_s

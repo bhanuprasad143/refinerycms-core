@@ -1,13 +1,13 @@
 # Encoding: UTF-8
 $:.push File.expand_path('../../core/lib', __FILE__)
-require_relative 'lib/refinery/version'
+# require_relative 'lib/refinery/version'
 
-version = Refinery::Version.to_s
+# version = Refinery::Version.to_s
 
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = %q{refinerycms-core}
-  s.version           = version
+  s.version           = %q{2.0.2}
   s.summary           = %q{Core extension for Refinery CMS}
   s.description       = %q{The core of Refinery CMS. This handles the common functionality and is required by most extensions}
   s.email             = %q{info@refinerycms.com}

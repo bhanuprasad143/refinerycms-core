@@ -1,5 +1,5 @@
 # Encoding: UTF-8
-$:.push File.expand_path('../../core/lib', __FILE__)
+$:.push File.expand_path('lib/refinery/', __FILE__)
 require 'refinery/version'
 
 version = Refinery::Version.to_s
@@ -32,3 +32,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'uglifier',                    '>= 1.0.3'
   s.add_dependency 'jquery-rails',                '~> 2.0.0'
 end
+

@@ -1,6 +1,6 @@
 # Encoding: UTF-8
-$:.push File.expand_path('../lib', __FILE__)
-require 'refinery/version'
+$:.push File.expand_path('../../core/lib', __FILE__)
+require_relative 'lib/refinery/version'
 
 version = Refinery::Version.to_s
 

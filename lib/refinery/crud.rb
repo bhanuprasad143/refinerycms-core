@@ -169,9 +169,8 @@ module Refinery
           # It will be ordered based on the conditions specified into crudify
           # And eager loading is applied as specified into crudify.
           def find_all_#{plural_name}(conditions = #{options[:conditions].inspect})
-            @#{plural_name} = #{class_name}.where(1)
-            @#{plural_name} = @#{plural_name}.by_site(current_site) if #{class_name}.column_names.include?('site_id')
-            @#{plural_name} = @#{plural_name}.where(conditions).includes(
+            @#{plural_name} = #{class_name}.by_site(current_site) if #{class_name}.column_names.include?('site_id')
+            @#{plural_name} = (@#{plural_name} || #{class_name}).where(conditions).includes(
                                 #{options[:include].map(&:to_sym).inspect}
                               ).order("#{options[:order]}")
           end

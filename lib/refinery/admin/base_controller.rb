@@ -10,7 +10,7 @@ module Refinery
       included do
         layout :layout?
 
-        before_filter :authenticate_user!, :restrict_plugins, :restrict_controller
+        before_filter :refinery_user_required!, :restrict_plugins, :restrict_controller
         after_filter :store_location?, :except => [:new, :create, :edit, :update, :destroy, :update_positions] # for redirect_back_or_default
 
         helper_method :searching?, :group_by_date

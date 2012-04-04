@@ -73,6 +73,7 @@ module Refinery
 
       # Override authorized? so that only users with the Refinery role can admin the website.
       def authorized?
+        logger.info ">>>>>>>>>>>>>AUTHORIZED? "
         refinery_user?
       end
     end
